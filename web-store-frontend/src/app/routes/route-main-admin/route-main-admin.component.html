@@ -1,0 +1,16 @@
+<div class="contenedor">
+  <div class="row">
+    Logoxd(por centrar :v)
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+      <button [routerLink]="['/homeAdmin','acqOrders']">Pedidos</button>
+    </div>
+    <div class="col-lg-2">
+      <button [routerLink]="['/homeAdmin','warehouse']">Bodegas</button>
+    </div>
+  </div>
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
