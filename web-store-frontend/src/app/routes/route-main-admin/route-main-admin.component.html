@@ -1,16 +1,18 @@
-<div class="contenedor">
-  <div class="row">
-    Logoxd(por centrar :v)
-  </div>
-  <div class="row">
-    <div class="col-lg-2">
-      <button [routerLink]="['/homeAdmin','acqOrders']">Pedidos</button>
+<div class="ui fluid container">
+    <div class="ui center aligned container">
+        <i class="massive modx icon"></i>
+        <p>Marca</p>
     </div>
-    <div class="col-lg-2">
-      <button [routerLink]="['/homeAdmin','warehouse']">Bodegas</button>
+    <div class="ui stackable menu">
+        <a class="item" [routerLink]="['/homeAdmin','acqOrders']">Pedidos</a>
+        <a class="item" [routerLink]="['/homeAdmin','warehouse']">Bodegas</a>
+        <a class="item" [routerLink]="['/homeAdmin','usersAdmin']">Clientes</a>
+        <a class="item" [routerLink]="['/homeAdmin','sales']">Ventas</a>
+        <div class="right menu">
+            <a class="ui item">Cerrar Sesión</a>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <router-outlet></router-outlet>
-  </div>
+    <div class="ui fluid container">
+        <router-outlet></router-outlet>
+    </div>
 </div>
