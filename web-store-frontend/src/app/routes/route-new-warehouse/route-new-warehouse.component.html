@@ -1,3 +1,19 @@
-<p>
-  route-new-warehouse works!
-</p>
+<div class="ui raised very padded text fluid container segment" id="spacing">
+  <h1 class="ui header">Nueva Bodega</h1>
+  <h3 class="ui header">Codigo</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+  <h3 class="ui header">Direccion</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+  <div class="ui two column grid" id="spacing">
+    <div class="column" align="center">
+      <button class="ui red button" [routerLink]="['/homeAdmin','warehouse']">Cancelar</button>
+    </div>
+    <div class="column" align="center">
+      <button class="ui green button">Guardar</button>
+    </div>
+  </div>
+</div>
