@@ -1,3 +1,55 @@
-<p>
-  route-new-users-admin works!
-</p>
+<div class="ui raised very padded text fluid container segment" id="spacing">
+  <h1 class="ui header">Datos Personales</h1>
+  <h3 class="ui header">Nombres</h3>
+  <div class="ui input" id="complete_wide">
+    <div class="ui input" id="double_space">
+      <input type="text">
+    </div>
+    <div class="ui input" id="double_space1">
+      <input type="text">  
+    </div>
+  </div>
+  <h3 class="ui header">Apellidos</h3>
+  <div class="ui input" id="complete_wide">
+    <div class="ui input" id="double_space">
+      <input type="text">
+    </div>
+    <div class="ui input" id="double_space1">
+      <input type="text">  
+    </div>
+  </div>
+  <h3 class="ui header">Cédula</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+  <h3 class="ui header">Teléfono</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+  <h3 class="ui header">Correo Electrónico</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="email">
+  </div>
+
+  <h3 class="ui header">Usuario</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+  <h3 class="ui header">Contraseña</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="password">
+  </div>
+  <h3 class="ui header">Roles</h3>
+  <div class="ui input" id="complete_wide">
+    <input type="text">
+  </div>
+
+  <div class="ui two column grid" id="spacing">
+    <div class="column" align="center">
+      <button class="ui red button" [routerLink]="['/homeAdmin','usersAdmin']">Cancelar</button>
+    </div>
+    <div class="column" align="center">
+      <button class="ui green button">Guardar</button>
+    </div>
+  </div>
+</div>
