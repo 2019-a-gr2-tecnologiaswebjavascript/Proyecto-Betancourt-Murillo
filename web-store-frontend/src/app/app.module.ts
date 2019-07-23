@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,11 @@ import { ProductComponent } from './web-components/product/product.component';
 import { SaleComponent } from './web-components/sale/sale.component';
 import { WarehouseComponent } from './web-components/warehouse/warehouse.component';
 import { UserComponent } from './web-components/user/user.component';
+import { HttpPrincipalService } from './services/http/http-principal/http-principal.service';
+import { UserHttpService } from './services/http/user-http/user-http.service';
+import { GuardService } from './services/auth/guard/guard.service';
+import { LoggedInService } from './services/auth/logged-in/logged-in.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,9 +70,17 @@ import { UserComponent } from './web-components/user/user.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpPrincipalService,
+    UserHttpService,
+    GuardService,
+    LoggedInService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,21 +5,28 @@
             <div class="content">Marca</div>
         </h2>
         <h1 class="ui header">Iniciar Sesión</h1>
-        <form class="ui large form">
+        <form class="ui large form"
+            #formularioUsuario = "ngForm"
+            novalidate
+        >
             <div class="ui stacked segment">
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="email" placeholder="Usuario">
+                        <input id="username" required type="text" name="username" placeholder="Usuario" [(ngModel)]="userName">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="password" placeholder="Password">
+                        <input id="password" required type="password" name="password" placeholder="Password" [(ngModel)]="password">
                     </div>
                 </div>
-                <div class="ui field large green submit button" routerLink="/homeAdmin">Login</div>
+                <div>
+                    <button type="button" (click)="login()" class="ui field large green submit button" routerLink="/homeAdmin">
+                        Login
+                    </button>
+                </div>
             </div>
         </form>
     </div>

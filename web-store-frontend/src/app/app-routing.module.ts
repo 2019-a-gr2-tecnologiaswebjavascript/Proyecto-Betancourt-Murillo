@@ -12,6 +12,7 @@ import { RouteUsersAdminComponent } from './routes/route-users-admin/route-users
 import { RouteNewUsersAdminComponent } from './routes/route-new-users-admin/route-new-users-admin.component';
 import { RouteSalesComponent } from './routes/route-sales/route-sales.component';
 import { RouteSalesDetailsComponent } from './routes/route-sales-details/route-sales-details.component';
+import { GuardService } from './services/auth/guard/guard.service';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path : 'homeAdmin',
     component : RouteMainAdminComponent,
+    canActivate : [
+      GuardService
+    ],
     children : [
       {
         path : 'acqOrders',
