@@ -1,55 +1,60 @@
 <div class="ui raised very padded text fluid container segment" id="spacing">
   <h1 class="ui header">Datos Personales</h1>
-  <h3 class="ui header">Nombres</h3>
-  <div class="ui input" id="complete_wide">
-    <div class="ui input" id="double_space">
-      <input type="text">
+  <form class="ui large form"
+      #formularioUsuario = "ngForm"
+      novalidate
+  >
+    <h3 class="ui header">Nombres</h3>
+    <div class="ui input" id="complete_wide">
+      <div class="ui input" id="double_space">
+        <input id="primerNombre" required type="text" name="primerNombre" [(ngModel)]="primerNombre">
+      </div>
+      <div class="ui input" id="double_space1">
+        <input id="segundoNombre" type="text" name="segundoNombre" [(ngModel)]="segundoNombre">  
+      </div>
     </div>
-    <div class="ui input" id="double_space1">
-      <input type="text">  
+    <h3 class="ui header">Apellidos</h3>
+    <div class="ui input" id="complete_wide">
+      <div class="ui input" id="double_space">
+        <input id="primerApellido" required type="text" name="primerApellido" [(ngModel)]="primerApellido">
+      </div>
+      <div class="ui input" id="double_space1">
+        <input id="segundoApellido" type="text" name="segundoApellido" [(ngModel)]="segundoApellido"> 
+      </div>
     </div>
-  </div>
-  <h3 class="ui header">Apellidos</h3>
-  <div class="ui input" id="complete_wide">
-    <div class="ui input" id="double_space">
-      <input type="text">
+    <h3 class="ui header">Cédula</h3>
+    <div class="ui input" id="complete_wide">
+      <input id="cedula" required type="text" name="cedula" [(ngModel)]="cedula">
     </div>
-    <div class="ui input" id="double_space1">
-      <input type="text">  
+    <h3 class="ui header">Teléfono</h3>
+    <div class="ui input" id="complete_wide">
+      <input id="telefono" required type="text" name="telefono" [(ngModel)]="telefono">
     </div>
-  </div>
-  <h3 class="ui header">Cédula</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="text">
-  </div>
-  <h3 class="ui header">Teléfono</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="text">
-  </div>
-  <h3 class="ui header">Correo Electrónico</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="email">
-  </div>
+    <h3 class="ui header">Correo Electrónico</h3>
+    <div class="ui input" id="complete_wide">
+      <input id="correo" required type="text" name="correo" [(ngModel)]="correo">
+    </div>
 
-  <h3 class="ui header">Usuario</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="text">
-  </div>
-  <h3 class="ui header">Contraseña</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="password">
-  </div>
-  <h3 class="ui header">Roles</h3>
-  <div class="ui input" id="complete_wide">
-    <input type="text">
-  </div>
-
-  <div class="ui two column grid" id="spacing">
-    <div class="column" align="center">
-      <button class="ui red button" [routerLink]="['/homeAdmin','usersAdmin']">Cancelar</button>
+    <h3 class="ui header">Usuario</h3>
+    <div class="ui input" id="complete_wide">
+      <input id="nombreUsuario" required type="text" name="nombreUsuario" [(ngModel)]="nombreUsuario">
     </div>
-    <div class="column" align="center">
-      <button class="ui green button">Guardar</button>
+    <h3 class="ui header">Contraseña</h3>
+    <div class="ui input" id="complete_wide">
+      <input id="pass" required type="text" name="pass" [(ngModel)]="pass">
     </div>
-  </div>
+    <h3 class="ui header">Roles</h3>
+    <select name="states"  multiple="" [(ngModel)]="roles">
+        <option value="1">Administrador</option>
+        <option value="2">Cliente</option>
+    </select>
+    <div class="ui two column grid" id="spacing">
+      <div class="column" align="center">
+        <button class="ui red button" [routerLink]="['/homeAdmin','usersAdmin']" (click)="cleanInputs()">Cancelar</button>
+      </div>
+      <div class="column" align="center">
+        <button class="ui green button" (click)="save()">Guardar</button>
+      </div>
+    </div>
+  </form>
 </div>
