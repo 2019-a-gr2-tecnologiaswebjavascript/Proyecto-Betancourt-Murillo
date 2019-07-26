@@ -44,8 +44,8 @@ export class HttpPrincipalService<ClaseEntidad> {
             )
     }
     
-    actualizar(nuevoRegistro : ClaseEntidad) : Observable<ClaseEntidad>{
-        const url = `${this.url}${this.modelo}`
+    actualizar(id : number, nuevoRegistro : ClaseEntidad) : Observable<ClaseEntidad>{
+        const url = `${this.url}${this.modelo}/${id}`
         return this.httpClient
             .put(url, nuevoRegistro)
             .pipe(

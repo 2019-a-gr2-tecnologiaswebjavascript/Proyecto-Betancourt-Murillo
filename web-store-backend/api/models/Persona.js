@@ -36,12 +36,10 @@ module.exports = {
       minLength : 8,
       maxLength : 15,
       required : true,
-      unique : true,
-      regex : /^[0-9]*$/gm
+      unique : true
     },
     telefono : {
-      type : 'string',
-      regex : /^[0-9]*$/gm
+      type : 'string'
     },
     correo : {
       type : 'string',

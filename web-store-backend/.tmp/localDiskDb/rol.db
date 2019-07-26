@@ -1,1 +1,9 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"nombre":"Administrador","createdAt":1564094212147,"updatedAt":1564094212147,"id":3,"_id":3}
+{"$$deleted":true,"_id":3}
+{"nombre":"Administrador","createdAt":1564094212147,"updatedAt":1564094231646,"id":3,"_id":3}
+{"$$deleted":true,"_id":3}
+{"nombre":"Administrador","createdAt":1564094212147,"updatedAt":1564094236496,"id":3,"_id":3}
+{"nombre":"Cliente","id":2,"createdAt":1564094256226,"updatedAt":1564094256226,"_id":2}
+{"$$deleted":true,"_id":3}
+{"nombre":"Administrador","id":1,"createdAt":1564094286236,"updatedAt":1564094286236,"_id":1}
