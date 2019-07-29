@@ -1,5 +1,5 @@
-{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"rol_FK":1,"usuario_FK":17,"createdAt":1564094374820,"updatedAt":1564094374820,"id":3,"_id":3}
 {"rol_FK":2,"usuario_FK":17,"createdAt":1564094379975,"updatedAt":1564094379975,"id":4,"_id":4}
 {"rol_FK":1,"usuario_FK":33,"createdAt":1564095280470,"updatedAt":1564095280470,"id":5,"_id":5}
 {"rol_FK":2,"usuario_FK":33,"createdAt":1564095280490,"updatedAt":1564095280490,"id":6,"_id":6}
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
