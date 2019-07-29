@@ -36,6 +36,9 @@ import { UserHttpService } from './services/http/user-http/user-http.service';
 import { GuardService } from './services/auth/guard/guard.service';
 import { LoggedInService } from './services/auth/logged-in/logged-in.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonHttpService } from './services/http/person-http/person-http.service';
+import { SessionService } from './services/http/session/session.service';
+import { UserRolService } from './services/http/user-rol-http/user-rol.service';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpPrincipalService,
     UserHttpService,
     GuardService,
-    LoggedInService
+    LoggedInService,
+    PersonHttpService,
+    SessionService,
+    UserRolService
 
   ],
   bootstrap: [AppComponent]

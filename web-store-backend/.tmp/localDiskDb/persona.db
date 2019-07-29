@@ -1,3 +1,10 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"cedula","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"correo","unique":true,"sparse":false}}
+{"primerNombre":"José","primerApellido":"Murillo","cedula":"1805094230","telefono":"2823737","correo":"jose719810@hotmail.com","persona_usuario_FK":1,"createdAt":1564094058184,"updatedAt":1564094058184,"id":1,"segundoNombre":"","segundoApellido":"","_id":1}
+{"$$deleted":true,"_id":1}
+{"primerNombre":"José","primerApellido":"Murillo","cedula":"1805094230","telefono":"2823737","correo":"jose719810@hotmail.com","persona_usuario_FK":17,"createdAt":1564094058184,"updatedAt":1564094097749,"id":1,"segundoNombre":"","segundoApellido":"","_id":1}
+{"primerNombre":"Andrea","segundoNombre":"Lorena","primerApellido":"Murillo","segundoApellido":"López","cedula":"1804040400","telefono":"2824737","correo":"andreita@hotmail.com","persona_usuario_FK":18,"createdAt":1564094573653,"updatedAt":1564094573653,"id":2,"_id":2}
+{"primerNombre":"Andrea","primerApellido":"Murillo","cedula":"1819991919","telefono":"91919191","correo":"jsijujeujes@jrdjdrj.com","persona_usuario_FK":27,"createdAt":1564094907359,"updatedAt":1564094907359,"id":3,"segundoNombre":"","segundoApellido":"","_id":3}
+{"primerNombre":"jiedjedj","segundoNombre":"ijijij","primerApellido":"jiiji","segundoApellido":"kiiki","cedula":"judeioedjoi","telefono":"oiijieioeio","correo":"oiiemojidedjioe@ijorfijocr.com","persona_usuario_FK":32,"createdAt":1564095131582,"updatedAt":1564095131582,"id":4,"_id":4}
+{"primerNombre":"jjjjj","segundoNombre":"jjjjj","primerApellido":"jjjikji","segundoApellido":"ijijiji","cedula":"ijijijij","telefono":"ijijijiji","correo":"ijijijij@jejij.com","persona_usuario_FK":33,"createdAt":1564095280445,"updatedAt":1564095280445,"id":5,"_id":5}
