@@ -1,0 +1,16 @@
+<div class="ui fluid container segment" id="spacing">
+  <div class="ui grid">
+    <div class="row" (click)="seeContent()">
+      <div class="four wide column" align="center">
+        <i class="massive warehouse icon"></i>
+      </div>
+      <div class="eight wide column">
+        <h1>Bodega {{warehouse.id}}</h1>
+        <p>{{warehouse.direccion}}</p>
+      </div>
+      <div align="center" class="four wide column">
+        <i class="huge question circle icon" id="content"></i>
+      </div>
+    </div>
+  </div>
+</div>

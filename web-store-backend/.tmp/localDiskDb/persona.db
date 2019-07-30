@@ -1,0 +1,5 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"cedula","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"correo","unique":true,"sparse":false}}
+{"createdAt":1564452371587,"updatedAt":1564464953278,"id":6,"primerNombre":"José","segundoNombre":"","primerApellido":"Murillo","segundoApellido":"","cedula":"1805094230","telefono":"0979360024","correo":"jose719810@hotmail.com","persona_usuario_FK":36,"_id":6}
+{"createdAt":1564461866569,"updatedAt":1564461866569,"id":7,"primerNombre":"Diego","segundoNombre":"","primerApellido":"Portero","segundoApellido":"","cedula":"0602252645","telefono":"0979360024","correo":"diego.portero@epn.edu.ec","persona_usuario_FK":37,"_id":7}

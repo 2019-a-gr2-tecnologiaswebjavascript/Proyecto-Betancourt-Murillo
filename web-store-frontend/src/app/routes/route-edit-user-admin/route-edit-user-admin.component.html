@@ -1,0 +1,71 @@
+<div class="ui raised very padded text fluid container segment" id="spacing">
+  <h1 class="ui header">Datos Personales</h1>
+  <form class="ui large form"
+      #formularioUsuario = "ngForm"
+      validate
+  >
+    <h3 class="ui header">Nombres</h3>
+    <div class="ui input" id="complete_wide">
+      <div class="ui input" id="double_space">
+        <input #pNombre="ngModel" id="primerNombre" required type="text" name="primerNombre" [(ngModel)]="primerNombre" required>
+      </div>
+      
+      <div class="ui input" id="double_space1">
+        <input #sNombre="ngModel" id="segundoNombre" type="text" name="segundoNombre" [(ngModel)]="segundoNombre">  
+      </div>
+    </div>
+    <div *ngIf="pNombre.touched && pNombre.invalid" class="ui red message" role="alert">
+      Ingrese su Nombre
+  </div>
+    <h3 class="ui header">Apellidos</h3>
+    <div class="ui input" id="complete_wide">
+      <div class="ui input" id="double_space">
+        <input  #pApellido="ngModel" id="primerApellido" required type="text" name="primerApellido" [(ngModel)]="primerApellido" required>
+      </div>
+      <div class="ui input" id="double_space1">
+        <input #sApellido="ngModel" id="segundoApellido" type="text" name="segundoApellido" [(ngModel)]="segundoApellido"> 
+      </div>
+    </div>
+    <div *ngIf="pApellido.touched && pApellido.invalid" class="ui red message" role="alert">
+      Ingrese su Apellido 
+  </div>
+    <h3 class="ui header">Cédula</h3>
+    <div class="ui input" id="complete_wide">
+      <input readonly #cedulaU="ngModel" id="cedula" required type="text" name="cedula" [(ngModel)]="cedula" required >
+    </div>
+                                 
+    <h3 class="ui header">Teléfono</h3>
+    <div class="ui input" id="complete_wide">
+      <input #telefonoU="ngModel" id="telefono" required type="text" name="telefono" [(ngModel)]="telefono" pattern="[0-9]+" required minlength="7" maxlength="10">
+    </div>
+    <div *ngIf="telefonoU.touched && telefonoU.invalid" class="ui red message" role="alert">
+      Ingrese un teléfono valido
+  </div>
+    <h3 class="ui header">Correo Electrónico</h3>
+    <div class="ui input" id="complete_wide">
+      <input  #correoU="ngModel" id="correo" required type="text" name="correo" [(ngModel)]="correo" required pattern="^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$" >
+    </div>
+    <div *ngIf="correoU.touched && correoU.invalid" class="ui red message" role="alert">
+      Ingrese un correo valido
+  </div>
+    <h3 class="ui header">Usuario</h3>
+    <div class="ui input" id="complete_wide">
+      <input readonly #nombreU="ngModel" id="nombreUsuario" required type="text" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+    </div>
+    <h3 class="ui header">Contraseña</h3>
+    <div class="ui input" id="complete_wide">
+      <input #passU="ngModel" id="pass" required type="password" name="pass" [(ngModel)]="pass" required minlength="8">
+    </div>
+    <div *ngIf="passU.touched && passU.invalid" class="ui red message" role="alert">
+      Ingrese una contraseña mayor a 8 digitos
+  </div>
+    <div class="ui two column grid" id="spacing">
+      <div class="column" align="center">
+        <button type="button" class="ui red button" [routerLink]="['/homeAdmin','usersAdmin']" (click)="cleanInputs()">Cancelar</button>
+      </div>
+      <div class="column" align="center">
+        <button class="ui green button" [disabled]="formularioUsuario.invalid" (click)="save()">Guardar</button>
+      </div>
+    </div>
+  </form>
+</div>

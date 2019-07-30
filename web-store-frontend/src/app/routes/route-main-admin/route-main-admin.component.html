@@ -1,0 +1,18 @@
+<div class="ui fluid container">
+  <div class="ui center aligned container">
+    <i class="massive modx icon"></i>
+    <h1 class="ui header">Marca</h1>
+  </div>
+  <div class="ui teal stackable inverted menu">
+    <a class="item" [routerLink]="['/homeAdmin','acqOrders']">Pedidos</a>
+    <a class="item" [routerLink]="['/homeAdmin','warehouse']">Bodegas</a>
+    <a class="item" [routerLink]="['/homeAdmin','usersAdmin']">Clientes</a>
+    <a class="item" [routerLink]="['/homeAdmin','sales']">Ventas</a>
+    <div class="right menu">
+      <a class="ui item">Cerrar Sesión</a>
+    </div>
+  </div>
+  <div class="ui fluid container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

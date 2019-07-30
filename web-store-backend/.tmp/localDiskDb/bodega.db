@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1564469820372,"updatedAt":1564469820372,"id":1,"direccion":"Ladron de Guevera E11-253, Quito 170517","_id":1}
+{"createdAt":1564470117756,"updatedAt":1564470117756,"id":2,"direccion":"Av. Universitaria, Quito 170129","_id":2}
+{"createdAt":1564470332169,"updatedAt":1564470332169,"id":3,"direccion":"Calle Vieja 12-30 y Elia Liut. Cuenca, Ecuador","_id":3}

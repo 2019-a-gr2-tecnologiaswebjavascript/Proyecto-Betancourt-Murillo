@@ -1,0 +1,15 @@
+<div class="ui fluid container segment" id="spacing">
+  <div class="ui grid">
+    <div class="row" (click)="goToEdit()">
+      <div class="four wide column" align="center">
+        <i class="massive user icon"></i>
+      </div>
+      <div class="eight wide column">
+        <h1>{{cliente.usuario.userName}}</h1>
+        <p>{{roles}}</p>
+        <p>{{cliente.primerNombre}} {{cliente.segundoNombre}} {{cliente.primerApellido}} {{cliente.segundoApellido}}</p>
+        <p>{{cliente.cedula}}</p>
+      </div>
+    </div>
+  </div>
+</div>

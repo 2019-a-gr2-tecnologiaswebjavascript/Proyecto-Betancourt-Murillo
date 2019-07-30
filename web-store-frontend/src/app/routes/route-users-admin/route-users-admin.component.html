@@ -1,0 +1,25 @@
+<div class="ui fluid container" id="spacing">
+  <div class="ui fluid container">
+    <div class="ui secondary menu">
+      <a class="item">
+        <button class="ui blue button" [routerLink]="['/homeAdmin','newUserAdmin']">Nuevo Cliente</button>
+      </a>
+      <div class="right menu">
+        <a class="item">
+          <div class="ui search">
+            <div class="ui icon input">
+              <input id="myInput" class="prompt" type="text">
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <app-user 
+    *ngFor="let client of clientes"
+    [cliente]="client"
+    [index]="clientesAux.indexOf(client)"></app-user>
+</div>

@@ -1,0 +1,45 @@
+<!-- <p>
+  route-acquisition-orders works!
+</p> -->
+<div class="ui fluid container" id="spacing">
+  <div class="ui fluid container">
+    <div class="ui secondary menu">
+      <a class="item">
+        <button class="ui blue button" [routerLink]="['/homeAdmin','newOrder']">Nuevo Pedido</button>
+      </a>
+      <div class="right menu">
+        <a class="item">
+          <div class="ui search">
+            <div class="ui icon input">
+              <input class="prompt" type="text">
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui fluid container segment" id="spacing">
+    <div class="ui grid">
+      <div class="row" [routerLink]="['/homeAdmin','acqOrdersDetail']">
+        <div class="one wide column">
+
+        </div>
+        <div class="four wide column" align="center">
+          <h2>Pedido #ko992ks82</h2>
+          <p>Fecha</p>
+          <p>Precio</p>
+        </div>
+        <div class="seven wide column">
+
+        </div>
+        <div align="center" class="four wide column">
+          <br>
+          <i class="huge circle icon green" id="content"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1564452372008,"updatedAt":1564455712171,"id":7,"rol_FK":1,"usuario_FK":36,"_id":7}
+{"createdAt":1564452372371,"updatedAt":1564455719540,"id":8,"rol_FK":2,"usuario_FK":36,"_id":8}
+{"createdAt":1564461866605,"updatedAt":1564461866605,"id":9,"rol_FK":1,"usuario_FK":37,"_id":9}
