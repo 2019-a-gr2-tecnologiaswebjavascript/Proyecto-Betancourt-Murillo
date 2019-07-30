@@ -42,6 +42,7 @@ import { RouteEditUserAdminComponent } from './routes/route-edit-user-admin/rout
 import { SessionService } from './services/session/session.service';
 import { WarehouseHttpService } from './services/http/warehouse-http/warehouse-http.service';
 import { ProductSaleComponent } from './web-components/product-sale/product-sale.component';
+import { OrderComponent } from './web-components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { ProductSaleComponent } from './web-components/product-sale/product-sale
     UserComponent,
     RouteEditUserAdminComponent,
     UserComponent,
-    ProductSaleComponent
+    ProductSaleComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

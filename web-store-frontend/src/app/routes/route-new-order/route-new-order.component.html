@@ -11,57 +11,34 @@
                   <h2>Bodega:</h2>
               </div>
               <div class="nine wide column" style="text-align: left">
-                  <h2>Nombre de bodega</h2>
+                    <select name="warehouses" [(ngModel)]="warehouseId" required>
+                        <option *ngFor="let warehouse of warehouses" [value]="warehouse.id">{{warehouse.id}}</option>
+                    </select>
               </div>
           </div>
       </div>
       <div class="ui vertical segment" style="background-color: #eae2b7;text-align: center">
 
           <div class="ui grid">
-              <div class="three column row">
+              <div *ngFor="let item of cart" class="three column row">
                   <div class="column">
-                      <p>Nombre del producto</p>
-                      <p>Distribuidor</p>
+                      <p>{{item.producto.nombre}}</p>
+                      <p>{{item.producto.distribuidor}}</p>
                   </div>
                   <div class="column">
                       <button class="ui compact icon button">
-                          <i class="minus icon"></i>
+                          <i class="minus icon" (click)="removeFromCart(item.producto)"></i>
                       </button>
                       <div class="ui label">
-                          23
+                          {{item.cantidad}}
                       </div>
-                      <button class="ui compact icon button">
+                      <button class="ui compact icon button" (click)="addToCart(item.producto)">
                           <i class="plus icon"></i>
                       </button>
                   </div>
                   <div class="column">
                       <div class="ui label">
-                          40$
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="ui grid">
-              <div class="three column row">
-                  <div class="column" >
-                      <p>Nombre del producto</p>
-                      <p>Distribuidor</p>
-                  </div>
-                  <div class="column">
-                      <button class="ui compact icon button">
-                          <i class="minus icon"></i>
-                      </button>
-                      <div class="ui label">
-                          23
-                      </div>
-                      <button class="ui compact icon button">
-                          <i class="plus icon"></i>
-                      </button>
-                  </div>
-                  <div class="column">
-                      <div class="ui label">
-                          40$
+                          {{item.producto.precio}}
                       </div>
                   </div>
               </div>
@@ -74,20 +51,20 @@
   <div class="six wide column">
       <div class="ui vertical segment" style="background-color: #eae2b7;text-align: center">
           <div class="ui grid">
-              <div class="three column row">
+              <div *ngFor="let product of products" class="three column row">
                   <div class="column">
-                      <button class="ui compact icon button">
+                      <button class="ui compact icon button" (click)="addToCart(product)">
                           <i class="plus icon"></i>
                       </button>
                   </div>
                   <div class="column">
-                      <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MQCY2?wid=2104&hei=2980&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1502831077669"
-                          width="70" height="90">
+                      <img [src]="urlArray[products.indexOf(product)]"
+                          height="90">
                   </div>
                   <div class="column">
-                      <p>Nombre del producto</p>
-                      <p>Distribuidor</p>
-                      <p>Precio</p>
+                      <p>{{product.nombre}}</p>
+                      <p>{{product.distribuidor}}</p>
+                      <p>{{product.precio}}</p>
                   </div>
               </div>
           </div>
@@ -96,4 +73,17 @@
   <div class="one wide column">
 
   </div>
+</div>
+
+<div class="ui divider"></div>
+<div class="ui grid">
+    <div class="one wide column"></div>
+    <div class="six wide column">
+        Total: $ {{totalCost.precioTotal}}
+    </div>
+    <div class="two wide column"></div>
+    <div class="six wide column">
+        <button class="ui green button" (click)="shop()">Comprar</button>
+    </div>
+    <div class="one wide column"></div>
 </div>

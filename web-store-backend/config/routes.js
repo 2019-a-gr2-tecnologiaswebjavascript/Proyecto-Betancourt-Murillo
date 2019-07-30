@@ -44,6 +44,9 @@ module.exports.routes = {
   'GET /allOrders' : {
     action : 'pedido/listAll'
   },
+  'GET /allSales' : {
+    action : 'ventas/listAll'
+  }
 
 
 

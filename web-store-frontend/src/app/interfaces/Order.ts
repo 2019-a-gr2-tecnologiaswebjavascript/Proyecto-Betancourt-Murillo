@@ -4,9 +4,10 @@ export interface Order{
     createdAt?: number
     updatedAt?: number
     id?: number
-    fecha : string
-    precioTotal : number
-    finalizado : boolean
+    fecha? : string
+    precioTotal? : number
+    finalizado? : boolean
     productos? : any[]
-    bodega : number | Warehouse | any
+    bodega? : number | Warehouse | any
+    bodega_FK? : number 
 }
