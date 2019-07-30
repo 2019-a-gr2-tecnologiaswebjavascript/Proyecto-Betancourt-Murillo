@@ -25,6 +25,12 @@ module.exports = {
     bodegas : {
       collection : 'BodegaProducto',
       via : 'producto_FK'
+    },
+    picFD : {
+      type : 'string'
+    },
+    distribuidor : {
+      type : 'string'
     }
 
   },

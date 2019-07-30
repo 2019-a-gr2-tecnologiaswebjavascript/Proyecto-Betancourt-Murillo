@@ -1,2 +1,4 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"createdAt":1564471106009,"updatedAt":1564471106009,"id":1,"stock":10,"producto_FK":1,"bodega_FK":1,"_id":1}
+{"createdAt":1564491894238,"updatedAt":1564491894238,"id":2,"stock":0,"producto_FK":2,"bodega_FK":1,"_id":2}
+{"createdAt":1564492364548,"updatedAt":1564492364548,"id":3,"stock":5,"producto_FK":2,"bodega_FK":2,"_id":3}

@@ -91,6 +91,7 @@ module.exports = {
                     },
                     "roles" : rolesTot
                 })
+                rolesTot = []
             });
             setTimeout(function(){
                 return res.ok(userToAppend)
