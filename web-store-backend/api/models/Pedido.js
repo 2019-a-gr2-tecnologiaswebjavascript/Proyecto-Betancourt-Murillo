@@ -21,6 +21,12 @@ module.exports = {
     productos : {
         collection : 'PedidoProducto',
         via : 'pedido_FK'
+    },
+    bodega_FK :{
+      model: 'Bodega'
+    },
+    finalizado : {
+      type : 'boolean'
     }
 
   },

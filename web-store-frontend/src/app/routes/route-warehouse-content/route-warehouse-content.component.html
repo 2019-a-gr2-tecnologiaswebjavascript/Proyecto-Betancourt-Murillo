@@ -2,7 +2,7 @@
   <div class="ui fluid container" align="right">
     <div class="ui search">
       <div class="ui icon input" id="wide">
-        <input class="prompt" type="text">
+        <input id="myInput" class="prompt" type="text">
         <i class="search icon"></i>
       </div>
       <div class="results"></div>
@@ -10,19 +10,8 @@
   </div>
 
   <div class="ui fluid container" id="spacing" style="width: 80%">
-    <div class="ui grid">
-      <div class="row" [routerLink]="['/homeAdmin','warehouseContent']">
-        <div class="four wide column" align="center">
-          <i class="massive bath icon"></i>
-        </div>
-        <div class="eight wide column" align="left">
-          <h1>Nombre del Producto</h1>
-          <p>Stock</p>
-        </div>
-        <div align="right" class="four wide column">
-          <i class="huge question circle icon" id="content"></i>
-        </div>
-      </div>
-    </div>
+    <app-product *ngFor = "let producto of products"
+      [product] = "producto.producto"
+      [stock] = "producto.stock"></app-product>
   </div>
 </div>

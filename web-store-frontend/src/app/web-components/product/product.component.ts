@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
+  @Input()
+  product
+
+  @Input()
+  stock
+
+  url
+
   constructor() { }
 
   ngOnInit() {
+    this.url = `${environment.url}/picture?id=${this.product.id}`
   }
+
+  
 
 }

@@ -6,8 +6,11 @@
   >
     <h3 class="ui header">Direccion</h3>
     <div class="ui input" id="complete_wide">
-      <input type="text" id="direccion" name="direccion" required [(ngModel)]="direccion">
+      <input #direccionW type="text" id="direccion" name="direccion" required [(ngModel)]="direccion">
     </div>
+    <div *ngIf="direccionW.touched && direccionW.invalid" class="ui red message" role="alert">
+      Ingrese una Direccion
+  </div>
     <div class="ui two column grid" id="spacing">
       <div class="column" align="center">
         <button class="ui red button" [routerLink]="['/homeAdmin','warehouse']">Cancelar</button>

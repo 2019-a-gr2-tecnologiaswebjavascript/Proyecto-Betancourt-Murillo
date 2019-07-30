@@ -1,3 +1,22 @@
-<p>
-  sale works!
-</p>
+<div class="ui fluid container segment" id="spacing">
+  <div class="ui grid">
+    <div class="row" (click)="seeDetails()">
+      <div class="one wide column">
+
+      </div>
+      <div class="four wide column" align="center">
+        <h2>Pedido {{order.id}}</h2>
+        <p>Fecha: {{order.fecha}}</p>
+        <p>Precio: $ {{order.precioTotal}}</p>
+      </div>
+      <div class="seven wide column">
+
+      </div>
+      <div align="center" class="four wide column">
+        <br>
+        <i *ngIf="order.finalizado == true" class="huge circle icon green" id="content"></i>
+        <i *ngIf="order.finalizado == false" class="huge circle icon red" id="content"></i>
+      </div>
+    </div>
+  </div>
+</div>

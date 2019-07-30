@@ -1,0 +1,21 @@
+<div class="ui fluid container segment" id="spacing">
+    <div class="ui grid">
+      <div class="row" (click)="seeDetail()">
+        <div class="one wide column">
+        </div>
+        <div class="four wide column" align="center">
+          <h2>Venta #{{sale.id}}</h2>
+          <p>Fecha: {{sale.fecha}}</p>
+          <p>Precio: $ {{sale.total}}</p>
+        </div>
+        <div class="seven wide column">
+        </div>
+        <div align="center" class="four wide column">
+          <br>
+          <i *ngIf="sale.finalizado == true" class="huge circle icon green" id="content"></i>
+          <i *ngIf="sale.finalizado == false" class="huge circle icon red" id="content"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  

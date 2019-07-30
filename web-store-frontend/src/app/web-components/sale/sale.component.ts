@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sale',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  order
+  @Input()
+  index
+
+  constructor(private readonly _router : Router) { }
 
   ngOnInit() {
+  }
+
+  seeDetails(){
+    var parametros = {
+      queryParams:{
+        'id': this.index
+      }
+    }
+    this._router.navigate(['/homeAdmin','acqOrdersDetail'],parametros)
   }
 
 }

@@ -1,2 +1,3 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
-{"createdAt":1564471058822,"updatedAt":1564471058822,"id":1,"nombre":"Razer BlackWidow Elite","precio":169.99,"_id":1}
+{"createdAt":1564471058822,"updatedAt":1564488788975,"id":1,"nombre":"Razer BlackWidow Elite","precio":169.99,"picFD":"D:\\Documents\\GitHub\\Proyecto-Betancourt-Murillo\\web-store-backend\\assets\\images\\5b3960cc-030b-4f82-af3e-f13ae95cfbe8.jpg","distribuidor":"","_id":1}
+{"createdAt":1564491839992,"updatedAt":1564491927457,"id":2,"nombre":"Razer DeathAdder Elite","precio":69.99,"picFD":"D:\\Documents\\GitHub\\Proyecto-Betancourt-Murillo\\web-store-backend\\assets\\images\\00a0530b-bf84-4d81-98e7-843fd19669ba.jpg","distribuidor":"","_id":2}

@@ -34,6 +34,18 @@ module.exports.routes = {
   },
   'GET /allWarehouses' : {
     action : 'bodega/listAll'
+  },
+  'POST /picture' : {
+    action : 'producto/upload'
+  },
+  'GET /picture' : {
+    action : 'producto/getPic'
+  },
+  'GET /allOrders' : {
+    action : 'pedido/listAll'
+  },
+  'GET /allSales' : {
+    action : 'ventas/listAll'
   }
 
 
