@@ -41,6 +41,7 @@ import { UserRolService } from './services/http/user-rol-http/user-rol.service';
 import { RouteEditUserAdminComponent } from './routes/route-edit-user-admin/route-edit-user-admin.component';
 import { SessionService } from './services/session/session.service';
 import { WarehouseHttpService } from './services/http/warehouse-http/warehouse-http.service';
+import { ProductSaleComponent } from './web-components/product-sale/product-sale.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { WarehouseHttpService } from './services/http/warehouse-http/warehouse-h
     WarehouseComponent,
     UserComponent,
     RouteEditUserAdminComponent,
-    UserComponent
+    UserComponent,
+    ProductSaleComponent
   ],
   imports: [
     BrowserModule,

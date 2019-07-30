@@ -18,8 +18,10 @@
     </div>
   </div>
 
-  <app-user 
-    *ngFor="let client of clientes"
-    [cliente]="client"
-    [index]="clientesAux.indexOf(client)"></app-user>
+  <div class="ui fluid container segment" id="spacing">
+    <app-user 
+      *ngFor="let client of clientes"
+      [cliente]="client"
+      [index]="clientesAux.indexOf(client)"></app-user>
+  </div>
 </div>

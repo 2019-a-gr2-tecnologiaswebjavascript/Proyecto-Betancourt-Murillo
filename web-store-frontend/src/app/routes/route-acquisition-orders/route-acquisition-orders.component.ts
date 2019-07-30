@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
   selector: 'app-route-acquisition-orders',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouteAcquisitionOrdersComponent implements OnInit {
 
-  constructor() { }
+  orders = []
+  ordersAux =[]
+
+  constructor(private readonly _session : SessionService) { }
 
   ngOnInit() {
+    this.orders = this._session.orders
+    this.ordersAux = this.orders
+    var input = <HTMLInputElement>document.getElementById("myInput");
+    input.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13) {
+        if(input.value != ''){
+          this.orders = this.ordersAux.filter(item => {
+            return item.id == input.value
+          })
+        }else{
+          this.orders = this.ordersAux
+        }
+      }
+    });
   }
 
 }

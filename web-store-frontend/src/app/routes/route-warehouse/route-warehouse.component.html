@@ -17,9 +17,11 @@
       </div>
     </div>
   </div>
+  <div class="ui fluid container segment" id="spacing"> 
+    <app-warehouse *ngFor="let warehouse of warehouses"
+      [warehouse]="warehouse"
+      [index]="warehouseAux.indexOf(warehouse)">
+    </app-warehouse>
+  </div>
 
-  <app-warehouse *ngFor="let warehouse of warehouses"
-    [warehouse]="warehouse"
-    [index]="warehouseAux.indexOf(warehouse)">
-  </app-warehouse>
 </div>

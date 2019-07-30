@@ -1,3 +1,17 @@
-<p>
-  product works!
-</p>
+<div class="ui fluid container" id="spacing" style="width: 80%">
+  <div class="ui grid">
+    <div class="row">
+      <div class="four wide column" align="center">
+        <img src={{url}} alt={{product.nombre}}>
+      </div>
+      <div class="eight wide column" align="left">
+        <h1>{{product.nombre}}</h1>
+        <p>Stock: {{stock}}</p>
+        <p>Proveedor: {{product.distribuidor}}</p>
+      </div>
+      <div align="right" class="four wide column" *ngIf="stock == 0">
+        <i class="huge question circle icon" id="content"></i>
+      </div>
+    </div>
+  </div>
+</div>
