@@ -6,7 +6,30 @@
  */
 
 module.exports = {
-  
+
+    listAll : async(req, res) => {
+        var warehouses = await Bodega.find().populate('productos')
+        var response = []
+        var products = []
+        warehouses.forEach(async (warehouse) => {
+            var content = await BodegaProducto.find({bodega_FK : warehouse.id}).populate('producto_FK')
+            content.forEach(product => {
+                products.push(
+                    {
+                        "stock": product.stock,
+                        "producto": product.producto_FK
+                    })
+            })
+            response.push({
+                "id" : warehouse.id,
+                "direccion" : warehouse.direccion,
+                "productos" : products
+            })
+        });
+        setTimeout(function(){
+            return res.ok(response)
+        }, 2000)
+    }
 
 };
 

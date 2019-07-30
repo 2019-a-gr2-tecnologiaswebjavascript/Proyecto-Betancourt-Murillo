@@ -1,11 +1,4 @@
-{"userName":"admin","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$H3AnAVkW//CO3b4G$ihoPyTtNy+VQGQ==$m1wU/Z9D29cjKuq15VkmMw","createdAt":1564093926462,"updatedAt":1564094186741,"id":17,"user_person_FK":1,"_id":17}
-{"userName":"andrea","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$zQ0vzzmI6KkloOqR$n0VtKZOO5RvSTA==$dAEx9BTbYL+ba8cqMjdmNw","createdAt":1564094573627,"updatedAt":1564094573627,"id":18,"user_person_FK":null,"_id":18}
-{"userName":"ueujseujse","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$FoYEg/bz1Xeunxy0$5mp52r9qlaA5YQ==$S5kO2VWvkM+N2lbYdYMMjg","createdAt":1564094884937,"updatedAt":1564094884937,"id":25,"user_person_FK":null,"_id":25}
-{"userName":"ueujseujsesss","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$znb00q78DXJ4K54h$J4p8yHw9WzMXHA==$+d6LjbpoDK+9aAUQIPFj8A","createdAt":1564094907340,"updatedAt":1564094907340,"id":27,"user_person_FK":null,"_id":27}
-{"userName":"bjjjjn","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$0XXBWdK6/lSQHqhQ$hoPE/kMTNpktVQ==$1s/+0BV3gKeDj79y+1yRhQ","createdAt":1564095046649,"updatedAt":1564095046649,"id":28,"user_person_FK":null,"_id":28}
-{"userName":"moieiodejioed","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$oSW/CfWiZx8MUhJn$FgwVqFUCIiAFtw==$2QPrEiNJUdv1BR4hHKZytw","createdAt":1564095083843,"updatedAt":1564095083843,"id":29,"user_person_FK":null,"_id":29}
-{"userName":"moieiodejioedsss","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$IePjWN04/BUdhpnD$pVCxmDeSdVMMPg==$Scvd7eOlhqCqpczVGWQuDA","createdAt":1564095115875,"updatedAt":1564095115875,"id":31,"user_person_FK":null,"_id":31}
-{"userName":"moiejioedsss","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$njRw253SCbtLxUaV$K5UtZtjM3gKPag==$FC89PhH9NV0rNnj8mqpr0g","createdAt":1564095131563,"updatedAt":1564095131563,"id":32,"user_person_FK":null,"_id":32}
-{"userName":"ijijijij","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$5xBF7r4tkwIwAkfo$TxkHPo4kF/t6LA==$byE/ucgPrCAlg99umkal2Q","createdAt":1564095280424,"updatedAt":1564095280424,"id":33,"user_person_FK":null,"_id":33}
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"userName","unique":true,"sparse":false}}
+{"createdAt":1564452371171,"updatedAt":1564464947939,"id":36,"userName":"jose7198","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$ZuJC2Wc6WfnCWbwz$JTZ27J3VITdVEQ==$uylJtOdNDdcchJgxheelpA","user_person_FK":6,"_id":36}
+{"createdAt":1564461866550,"updatedAt":1564461866614,"id":37,"userName":"Dandrezz","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$Kxv+q1KezBP2han1$i8XtBuFqWenAOw==$itZWfWXpbDjfW/QtFEKycA","user_person_FK":7,"_id":37}

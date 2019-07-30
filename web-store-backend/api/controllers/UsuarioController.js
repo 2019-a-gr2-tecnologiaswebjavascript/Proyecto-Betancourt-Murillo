@@ -61,6 +61,43 @@ module.exports = {
                 }
             )
         }
+    },
+
+    listAll : async (req, res) =>{
+        try{
+            var users = await Usuario.find()
+                .populate('user_roles')
+                .populate('user_person_FK')
+            var rolesTot = []
+            var userToAppend = []
+            users.forEach(async singleUser => {
+                var roles = await UsuarioRol.find({usuario_FK : singleUser.id})
+                    .populate('rol_FK')
+                roles.forEach(item => {
+                    rolesTot.push(item.rol_FK)
+                })
+                userToAppend.push({
+                    "id" : singleUser.user_person_FK.id,
+                    "primerNombre" : singleUser.user_person_FK.primerNombre,
+                    "segundoNombre" : singleUser.user_person_FK.segundoNombre,
+                    "primerApellido" : singleUser.user_person_FK.primerApellido,
+                    "segundoApellido" : singleUser.user_person_FK.segundoApellido,
+                    "cedula" : singleUser.user_person_FK.cedula,
+                    "telefono" : singleUser.user_person_FK.telefono,
+                    "correo" : singleUser.user_person_FK.correo,
+                    "usuario" : {
+                        "id" : singleUser.id,
+                        "userName" : singleUser.userName
+                    },
+                    "roles" : rolesTot
+                })
+            });
+            setTimeout(function(){
+                return res.ok(userToAppend)
+            }, 2000)
+        }catch{
+            return res.serverError()
+        }
     }
 
 };

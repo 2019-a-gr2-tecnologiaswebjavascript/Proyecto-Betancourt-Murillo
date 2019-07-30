@@ -28,7 +28,14 @@ module.exports.routes = {
   },
   'POST /apagarLed' : {
     action : 'led/apagarLed'
+  },
+  'GET /clientHandler' : {
+    action : 'usuario/listAll'
+  },
+  'GET /allWarehouses' : {
+    action : 'bodega/listAll'
   }
+
 
 
   /***************************************************************************
