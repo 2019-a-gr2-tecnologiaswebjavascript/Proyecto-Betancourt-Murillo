@@ -25,6 +25,7 @@ module.exports = {
                 "direccion" : warehouse.direccion,
                 "productos" : products
             })
+            products = []
         });
         setTimeout(function(){
             return res.ok(response)
