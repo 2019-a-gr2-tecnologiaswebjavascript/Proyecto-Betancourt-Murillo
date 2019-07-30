@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,8 +37,10 @@ import { GuardService } from './services/auth/guard/guard.service';
 import { LoggedInService } from './services/auth/logged-in/logged-in.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonHttpService } from './services/http/person-http/person-http.service';
-import { SessionService } from './services/http/session/session.service';
 import { UserRolService } from './services/http/user-rol-http/user-rol.service';
+import { RouteEditUserAdminComponent } from './routes/route-edit-user-admin/route-edit-user-admin.component';
+import { SessionService } from './services/session/session.service';
+import { WarehouseHttpService } from './services/http/warehouse-http/warehouse-http.service';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { UserRolService } from './services/http/user-rol-http/user-rol.service';
     ProductComponent,
     SaleComponent,
     WarehouseComponent,
+    UserComponent,
+    RouteEditUserAdminComponent,
     UserComponent
   ],
   imports: [
@@ -83,10 +87,12 @@ import { UserRolService } from './services/http/user-rol-http/user-rol.service';
     GuardService,
     LoggedInService,
     PersonHttpService,
+    UserRolService,
     SessionService,
-    UserRolService
+    WarehouseHttpService
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

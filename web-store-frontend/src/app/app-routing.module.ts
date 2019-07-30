@@ -13,6 +13,7 @@ import { RouteNewUsersAdminComponent } from './routes/route-new-users-admin/rout
 import { RouteSalesComponent } from './routes/route-sales/route-sales.component';
 import { RouteSalesDetailsComponent } from './routes/route-sales-details/route-sales-details.component';
 import { GuardService } from './services/auth/guard/guard.service';
+import { RouteEditUserAdminComponent } from './routes/route-edit-user-admin/route-edit-user-admin.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
       {
         path : 'salesDetail',
         component : RouteSalesDetailsComponent
+      },
+      {
+        path : 'editUserAdmin',
+        component : RouteEditUserAdminComponent
       }
     ]
   },

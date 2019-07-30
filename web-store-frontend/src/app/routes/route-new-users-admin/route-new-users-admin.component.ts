@@ -4,6 +4,7 @@ import { PersonHttpService } from 'src/app/services/http/person-http/person-http
 import { UserRolService } from 'src/app/services/http/user-rol-http/user-rol.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/User';
+import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
   selector: 'app-route-new-users-admin',
@@ -27,7 +28,8 @@ export class RouteNewUsersAdminComponent implements OnInit {
   constructor(private readonly _userHttp : UserHttpService,
     private readonly _personHttp : PersonHttpService,
     private readonly _userRol : UserRolService,
-    private readonly _router : Router) { }
+    private readonly _router : Router,
+    private readonly _session : SessionService) { }
 
 
   ngOnInit() {
@@ -92,6 +94,7 @@ export class RouteNewUsersAdminComponent implements OnInit {
     await this.asignarRoles(usuarioId)
     var condicion = await this.actualizarUsuario(usuarioId, personaId)
     if(condicion){
+      this._session.initialize()
       await this._router.navigate(['/homeAdmin'])
     }
   }

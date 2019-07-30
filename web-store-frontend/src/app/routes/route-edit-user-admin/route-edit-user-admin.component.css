@@ -1,0 +1,22 @@
+#spacing {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  #wide {
+    width: 80%;
+  }
+  
+  #complete_wide {
+    width: 100%;
+  }
+
+  #double_space{
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  #double_space1{
+    width: 100%;
+    margin-left: 10px
+  }

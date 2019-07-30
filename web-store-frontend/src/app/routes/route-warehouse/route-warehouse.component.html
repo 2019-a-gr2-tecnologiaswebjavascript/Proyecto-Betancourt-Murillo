@@ -8,7 +8,7 @@
         <a class="item">
           <div class="ui search">
             <div class="ui icon input">
-              <input class="prompt" type="text">
+              <input id="myInput" class="prompt" type="text">
               <i class="search icon"></i>
             </div>
             <div class="results"></div>
@@ -18,20 +18,8 @@
     </div>
   </div>
 
-  <div class="ui fluid container segment" id="spacing">
-    <div class="ui grid">
-      <div class="row" [routerLink]="['/homeAdmin','warehouseContent']">
-        <div class="four wide column" align="center">
-          <i class="massive warehouse icon"></i>
-        </div>
-        <div class="eight wide column">
-          <h1>Bodega 1</h1>
-          <p>Direccion</p>
-        </div>
-        <div align="center" class="four wide column">
-          <i class="huge question circle icon" id="content"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-warehouse *ngFor="let warehouse of warehouses"
+    [warehouse]="warehouse"
+    [index]="warehouseAux.indexOf(warehouse)">
+  </app-warehouse>
 </div>
