@@ -11,5 +11,5 @@ export interface Person {
     cedula : string
     telefono : string
     correo : string
-    persona_usuario_FK : User
+    persona_usuario_FK? : number | User | any
 }

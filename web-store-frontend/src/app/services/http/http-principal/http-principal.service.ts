@@ -44,8 +44,8 @@ export class HttpPrincipalService<ClaseEntidad> {
             )
     }
     
-    actualizar(nuevoRegistro : ClaseEntidad) : Observable<ClaseEntidad>{
-        const url = `${this.url}${this.modelo}`
+    actualizar(id : number, nuevoRegistro : ClaseEntidad) : Observable<ClaseEntidad>{
+        const url = `${this.url}${this.modelo}/${id}`
         return this.httpClient
             .put(url, nuevoRegistro)
             .pipe(
@@ -70,14 +70,14 @@ export class HttpPrincipalService<ClaseEntidad> {
             )
     }
 
-    buscarTodos() : Observable<ClaseEntidad> {
+    buscarTodos() : Observable<ClaseEntidad[]> {
         const url = `${this.url}${this.modelo}`
         return this.httpClient
             .get(url)
             .pipe(
                 map(
                     (datos) => {
-                        return datos as ClaseEntidad
+                        return datos as ClaseEntidad[]
                     }
                 )
             )
@@ -91,6 +91,19 @@ export class HttpPrincipalService<ClaseEntidad> {
                 map(
                     (datos)=>{
                         return datos as ClaseEntidad
+                    }
+                )
+            )
+    }
+
+    customGet(route : string) : Observable<ClaseEntidad[]> {
+        const url = `${this.url}${route}`
+        return this.httpClient
+            .get(url)
+            .pipe(
+                map(
+                    (datos)=>{
+                        return datos as ClaseEntidad[]
                     }
                 )
             )

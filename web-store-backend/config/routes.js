@@ -22,7 +22,32 @@ module.exports.routes = {
   '/': { view: 'pages/homepage' },
   'POST /login' : {
     action : 'usuario/login'
+  },
+  'POST /encenderLed' : {
+    action : 'led/encenderLed'
+  },
+  'POST /apagarLed' : {
+    action : 'led/apagarLed'
+  },
+  'GET /clientHandler' : {
+    action : 'usuario/listAll'
+  },
+  'GET /allWarehouses' : {
+    action : 'bodega/listAll'
+  },
+  'POST /picture' : {
+    action : 'producto/upload'
+  },
+  'GET /picture' : {
+    action : 'producto/getPic'
+  },
+  'GET /allOrders' : {
+    action : 'pedido/listAll'
+  },
+  'GET /allSales' : {
+    action : 'ventas/listAll'
   }
+
 
 
   /***************************************************************************

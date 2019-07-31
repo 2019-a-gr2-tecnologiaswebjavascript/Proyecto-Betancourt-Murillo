@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +36,13 @@ import { UserHttpService } from './services/http/user-http/user-http.service';
 import { GuardService } from './services/auth/guard/guard.service';
 import { LoggedInService } from './services/auth/logged-in/logged-in.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonHttpService } from './services/http/person-http/person-http.service';
+import { UserRolService } from './services/http/user-rol-http/user-rol.service';
+import { RouteEditUserAdminComponent } from './routes/route-edit-user-admin/route-edit-user-admin.component';
+import { SessionService } from './services/session/session.service';
+import { WarehouseHttpService } from './services/http/warehouse-http/warehouse-http.service';
+import { ProductSaleComponent } from './web-components/product-sale/product-sale.component';
+import { OrderComponent } from './web-components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +73,11 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     SaleComponent,
     WarehouseComponent,
-    UserComponent
+    UserComponent,
+    RouteEditUserAdminComponent,
+    UserComponent,
+    ProductSaleComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -78,9 +89,14 @@ import { HttpClientModule } from '@angular/common/http';
     HttpPrincipalService,
     UserHttpService,
     GuardService,
-    LoggedInService
+    LoggedInService,
+    PersonHttpService,
+    UserRolService,
+    SessionService,
+    WarehouseHttpService
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

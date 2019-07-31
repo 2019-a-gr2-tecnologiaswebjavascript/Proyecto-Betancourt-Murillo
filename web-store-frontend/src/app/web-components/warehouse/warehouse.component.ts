@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-warehouse',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  warehouse
+
+  @Input()
+  index
+  
+  constructor(private readonly _router:Router) { }
 
   ngOnInit() {
+  }
+
+  seeContent(){
+    var parametros = {
+      queryParams:{
+        'id': this.index
+      }
+    }
+    this._router.navigate(['/homeAdmin','warehouseContent'], parametros)
   }
 
 }

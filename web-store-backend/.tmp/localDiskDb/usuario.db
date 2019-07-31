@@ -1,3 +1,4 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"userName","unique":true,"sparse":false}}
-{"createdAt":1563895643256,"updatedAt":1563895643256,"id":1,"userName":"admin","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$fYaS1YoFAVrL+Fxk$p2dHK+nNYvUc5Q==$Ed6YaGrmxKRrJlbN91VL3Q","user_person_FK":null,"_id":1}
+{"createdAt":1564452371171,"updatedAt":1564464947939,"id":36,"userName":"jose7198","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$O2Fv2lIj7pEGvLf+$hrd2XlanY0bhEw==$6sCyhUAcCZ/Qn0MTzis07g","user_person_FK":6,"_id":36}
+{"createdAt":1564461866550,"updatedAt":1564461866614,"id":37,"userName":"Dandrezz","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$DaUgddbKsH0InjqH$4P15MOi4WybwPw==$CqdmkyGjBiSumi6Phlu7Dg","user_person_FK":7,"_id":37}

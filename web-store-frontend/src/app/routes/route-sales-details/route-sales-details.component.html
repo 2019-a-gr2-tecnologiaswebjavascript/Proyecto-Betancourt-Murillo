@@ -1,3 +1,25 @@
-<p>
-  route-sales-details works!
-</p>
+<div class="ui segment">
+  <div class="ui container" style="text-align: center">
+    <h1>Orden #{{id}}</h1>
+  </div>
+  <p>Nombre: {{nombre}}</p>
+  <p>Apellido: {{apellido}}</p>
+  <p>CI: {{ci}}</p>
+  <p>Correo: {{correo}}</p>
+  <p>Direccion: {{direccion}}</p>
+</div>
+
+<div class="ui fluid container segment" id="spacing">
+  <app-product-sale *ngFor="let detail of details"
+  [producto] = "detail.producto"
+  [cantidad] = "detail.cantidad"
+  [bodega] = "sale.bodega.id"></app-product-sale>
+</div>
+
+
+<footer>
+  <div class="ui container">
+    <h1>Total: $ {{total}}</h1>
+  </div>
+  <div class="ui hidden divider"></div>
+</footer>

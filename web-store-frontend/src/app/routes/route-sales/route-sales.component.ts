@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SaleHttpService } from 'src/app/services/http/sale-http/sale-http.service';
+import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
   selector: 'app-route-sales',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouteSalesComponent implements OnInit {
 
-  constructor() { }
+  sales
+
+  constructor(private readonly _session : SessionService) { }
 
   ngOnInit() {
+    this.sales = this._session.sales
   }
 
 }

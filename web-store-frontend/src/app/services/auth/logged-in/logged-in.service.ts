@@ -12,25 +12,21 @@ export class LoggedInService {
 
   constructor(private readonly _userHttp : UserHttpService) { }
 
-  login(userName : string, password : string) : boolean{
+  async login(userName : string, password : string){
     
     var credential = {
       userName : userName,
       password : password
     }
 
-    var login$ = this._userHttp.customPost('/login',credential)
-
-    login$.subscribe(
-      (nuevoUsuario)=>{
-        this.user = nuevoUsuario
-        this.isLoggedIn = true
-      },
-      (error) => {
-        console.log(error)
+    try{
+      var login$ = await this._userHttp.customPost('/login',credential).toPromise()
+      this.user = login$
+      this.isLoggedIn = true
+    }catch(error){
+      console.log(error)
         this.isLoggedIn = false
-      }
-    )
+    }
 
     return this.isLoggedIn
   }

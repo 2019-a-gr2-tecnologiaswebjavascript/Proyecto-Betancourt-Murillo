@@ -1,3 +1,5 @@
-<p>
-  route-sales works!
-</p>
+<div class="ui fluid container segment" id="spacing">
+  <app-order *ngFor="let sale of sales"
+    [sale]="sale"
+    [index]="sales.indexOf(sale)"></app-order>
+</div>

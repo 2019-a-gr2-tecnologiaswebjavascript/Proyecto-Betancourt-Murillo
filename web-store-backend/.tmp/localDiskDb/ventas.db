@@ -1,0 +1,2 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1564529132472,"updatedAt":1564529132472,"id":1,"nombre":"José Luis","apellido":"Murillo López","ci":"1805094230","correo":"jose719810@hotmail.com","direccion":"Ambato","fecha":"12/07/2019","total":169.99,"finalizado":true,"bodega":1,"_id":1}

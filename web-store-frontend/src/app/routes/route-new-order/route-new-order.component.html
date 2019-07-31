@@ -1,50 +1,89 @@
-<p>
-  route-new-order works!
-</p>
 <div class="ui hidden divider"></div>
 
 <div class="ui grid">
-  <div class="row">
-    <div class="one wide column">
-    </div>
-    <div class="six wide column" align="center">
-      <div style="background-color: #886f68 ">
-        <h1>Bodega:</h1>
-      </div>
-      <div style="background-color: #a49e8d ">
-          <div class="six wide column">
-            <p>Nombre del producto</p>
-            <p>Distribuidor</p>
+  <div class="one wide column">
+
+  </div>
+  <div class="six wide column">
+      <div class="ui vertical segment" style="background-color: #fcbf49">
+          <div class="ui grid">
+              <div class="six wide column" style="text-align: right">
+                  <h2>Bodega:</h2>
+              </div>
+              <div class="nine wide column" style="text-align: left">
+                    <select name="warehouses" [(ngModel)]="warehouseId" required>
+                        <option *ngFor="let warehouse of warehouses" [value]="warehouse.id">{{warehouse.id}}</option>
+                    </select>
+              </div>
           </div>
-          
       </div>
-    </div>
-    <div class="two wide column">
-    </div>
-    <div class="five wide column" align="center" style="background-color: aquamarine">
-      <p>a</p>
-    </div>
+      <div class="ui vertical segment" style="background-color: #eae2b7;text-align: center">
+
+          <div class="ui grid">
+              <div *ngFor="let item of cart" class="three column row">
+                  <div class="column">
+                      <p>{{item.producto.nombre}}</p>
+                      <p>{{item.producto.distribuidor}}</p>
+                  </div>
+                  <div class="column">
+                      <button class="ui compact icon button">
+                          <i class="minus icon" (click)="removeFromCart(item.producto)"></i>
+                      </button>
+                      <div class="ui label">
+                          {{item.cantidad}}
+                      </div>
+                      <button class="ui compact icon button" (click)="addToCart(item.producto)">
+                          <i class="plus icon"></i>
+                      </button>
+                  </div>
+                  <div class="column">
+                      <div class="ui label">
+                          {{item.producto.precio}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="two wide column">
+
+  </div>
+  <div class="six wide column">
+      <div class="ui vertical segment" style="background-color: #eae2b7;text-align: center">
+          <div class="ui grid">
+              <div *ngFor="let product of products" class="three column row">
+                  <div class="column">
+                      <button class="ui compact icon button" (click)="addToCart(product)">
+                          <i class="plus icon"></i>
+                      </button>
+                  </div>
+                  <div class="column">
+                      <img [src]="urlArray[products.indexOf(product)]"
+                          height="90">
+                  </div>
+                  <div class="column">
+                      <p>{{product.nombre}}</p>
+                      <p>{{product.distribuidor}}</p>
+                      <p>{{product.precio}}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="one wide column">
+
   </div>
 </div>
 
-<!-- <div class="ui fluid container segment" id="spacing">
-  <div class="ui grid">
-    <div class="row">
-      <div class="one wide column">
-
-      </div>
-      <div class="four wide column" align="center">
-        <h2>Pedido #ko992ks82</h2>
-        <p>Fecha</p>
-        <p>Precio</p>
-      </div>
-      <div class="seven wide column">
-
-      </div>
-      <div align="center" class="four wide column">
-        <br>
-        <i class="huge circle icon green" id="content"></i>
-      </div>
+<div class="ui divider"></div>
+<div class="ui grid">
+    <div class="one wide column"></div>
+    <div class="six wide column">
+        Total: $ {{totalCost.precioTotal}}
     </div>
-  </div>
-</div> -->
+    <div class="two wide column"></div>
+    <div class="six wide column">
+        <button class="ui green button" (click)="shop()">Comprar</button>
+    </div>
+    <div class="one wide column"></div>
+</div>
