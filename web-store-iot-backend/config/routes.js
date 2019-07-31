@@ -20,7 +20,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-
+  'POST /sensor/encenderLed' : {
+    action : 'sensorController/encenderLed'
+  },
+  'POST /sensor/apagarLed' : {
+    action : 'sensorController/apagarLed'
+  }
 
   /***************************************************************************
   *                                                                          *
